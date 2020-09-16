@@ -2,9 +2,15 @@ import Vue from 'vue'
 import App from './App.vue'
 import Router from 'vue-router'
 import Element from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 // 引入组件
 import Index from './components/Index/Index'
 import Cooperation from './components/Cooperation/Cooperation'
+import Troubleshooting from './components/Troubleshooting/Troubleshooting'
+import News from './components/News/News'
+import Product from './components/Product/Product'
+import About from './components/About/About'
+import Vip from './components/Vip/Vip'
 // 要告诉 vue 使用 Router
 Vue.use(Router)
 Vue.use(Element)
@@ -20,6 +26,11 @@ Vue.use(Element)
 const routes = [
   {path:'/',component:Index},//注意这里一定不能加s，否则报错
   {path:'/Cooperation',component:Cooperation},
+  {path:'/Troubleshooting',component:Troubleshooting},
+  {path:'/News',component:News},
+  {path:'/Product',component:Product},
+  {path:'/About',component:About},
+  {path:'/Vip',component:Vip},
 ]
 
 const router = new Router({
