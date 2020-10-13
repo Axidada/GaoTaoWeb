@@ -3,6 +3,8 @@ import App from './App.vue'
 import Router from 'vue-router'
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+//百度地图
+import BDMap from 'vue-baidu-map'
 // 引入组件
 import Index from './components/Index/Index'
 import Cooperation from './components/Cooperation/Cooperation'
@@ -14,6 +16,9 @@ import Vip from './components/Vip/Vip'
 // 要告诉 vue 使用 Router
 Vue.use(Router)
 Vue.use(Element)
+Vue.use(BDMap,{
+  ak:'MCCI9HFLMRiP8SW7DI0CWOuuRyfUSjoH'
+})
 
 // 公司首页      (Index)              ==>  一个轮播三张图片 1.清新(jpg)跳转公司产品 2.合作跳转商务合作  3.蓬勃跳转活动中心   导航外加一个登录/注册
 // 商务合作      (Cooperation)        ==>  预约咨询 未登录需要填写 联系人姓名 + 联系方式 + 备注   已登录确认信息就好

@@ -61,11 +61,13 @@ export default {
 <style scoped>
 .header {
   border-bottom: 2px solid black;
+  width: 80%;
+  margin: 0 auto;
 }
 .header-flex {
-  width: 80%;
+  width: 100%;
   display: flex;
-  margin: 1% 5% 0 5%;
+  margin: 0 auto;
   justify-content: space-between;
 }
 /* nav */
@@ -74,7 +76,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 .el-menu-demo{
@@ -97,7 +99,7 @@ export default {
 /* element nav */
 .el-menu-demo {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .el-menu.el-menu--horizontal {
   border-bottom: none !important;
@@ -116,11 +118,19 @@ export default {
   width: 100%;
   height: 100%;
 }
-.is-active {
+.router-link-exact-active {
   background-color: aqua;
 }
+.el-menu--horizontal>.el-menu-item .router-link-exact-active {
+    border-bottom: 2px solid #409EFF;
+    color: #303133;
+}
+.el-menu--horizontal>.el-menu-item.is-active {
+    border-bottom: none;
+    color: #303133;
+}
 .el-menu--horizontal > .el-menu-item {
-  width: 6%;
+  width: 8%;
   height: auto;
 }
 </style>
